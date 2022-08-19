@@ -1,4 +1,8 @@
 const formulario = document.querySelector('#form')
+const nome = document.querySelector('#name')
+const btnMore = document.querySelector('.btn-more')
+const produto = document.querySelector('.product')
+
 
 formulario.onsubmit = validacaoForm
 
@@ -47,9 +51,69 @@ function validacaoForm(event) {
         span.innerText = ''
     }
 
-    
-
-    if (!temErro) {
-        formulario.submit()
+    if (temErro) {
+        return
     }    
+
+    formularioValidado()
 }
+
+function formularioValidado() {
+    formulario.style.display = 'none'
+
+    const validado = formulario.nextSibling.nextSibling
+
+    validado.innerHTML = `<h2>Obrigado ${nome.value}, cadastro feito com sucesso!</h2>`
+}
+
+// fetch
+let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
+
+fetch(url)
+    .then(transformarEmJson)
+    .then(exibirNaTela)
+    .then(alimentarHtml)
+
+function transformarEmJson(response) {
+    return response.json()
+}
+
+function exibirNaTela(dados) {
+    return dados
+}
+
+function alimentarHtml(dados) {
+    const products = dados.products
+
+    let htmlProdutos = ''
+
+    for (let product of products) {
+        htmlProdutos += `
+                <div class="img">
+                    <img src="${product.image}">
+                </div>
+                <p class="nome-produto">
+                    ${product.name}
+                </p>
+                <p class="descricao-produto">
+                    ${product.description}
+                </p>
+                <p class="preco-antigo">
+                    De: R$${product.oldPrice}
+                </p>
+                <p class="preco-novo">
+                Por: R$${product.price}
+                </p>
+                <p class="promocao">
+                ou ${product.installments.count}x de R$${product.installments.value}
+                </p>
+                <button class="btn-comprar">Comprar</button>
+        `
+    }
+
+    produto.innerHTML = htmlProdutos
+
+}
+
+
+

@@ -49,9 +49,6 @@ body {
     margin-top: 20px;
 }
 
-.header nav .nav-list li {
-  
-}
 
 .header nav .nav-list li .nav-btn {
     padding: 12px 20px;
@@ -85,35 +82,35 @@ body {
     line-height: 18px;
 }
 
-.content #form  {
+.content .form  {
     width: 340px;
     display: flex;
     flex-direction: column;
 }
 
-.content #form .info {
+.content .form .info {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.content #form label {
+.content .form label {
     margin-bottom: 7px;
     font-size: 12px;
 }
 
-.content #form input {
+.content .form input {
     border: 1px solid #707070;
     height: 30px;
     color: #707070;
     padding-left: 10px;
 }
 
-.content #form input.error {
+.content .form input.error {
     border: 1px solid red;
 }
 
-.content #form .span-error {
+.content .form .span-error {
     color: red;
     font-size: 12px;
 }
@@ -124,29 +121,29 @@ body {
 
 
 
-.content #form .radio {
+.content .form .radio {
     display: flex;
     justify-content: space-between;
     width: 190px;
     margin-bottom: 23px;
 }
 
-.content #form .radio div {
+.content .form .radio div {
     display: flex;
     align-items: center;
 }
 
-.content #form .radio div input {
+.content .form .radio div input {
     margin-bottom: 0;
     margin-right: 5px;
 }
 
-.content #form .radio div label {
+.content .form .radio div label {
     margin-bottom: 0;
     font-size: 12px;
 }
 
-.content #form .btn-enviar {
+.content .form .btn-enviar {
     padding: 11px 148px;
     border: 1px solid #707070;
     background-color: #FFFFFF;
@@ -156,8 +153,109 @@ body {
     font-size: 12px;
 }
 
-.content #form .btn-enviar:hover {
+.content .form .btn-enviar:hover {
     cursor: pointer;
     background-color: #888888;
     color: #FFFFFF;
+}
+
+.content .validado {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+
+/**********
+    MAIN
+***********/
+
+.main {
+    margin-top: 79px;
+}
+
+
+.main h2 {
+    font-size: 18px;
+    color: #888888;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main .products {
+    width: 100%;
+    background-color: red;
+}
+
+.main .products .product-wrapper {
+    width: 200px;
+}
+
+.main .products .product {
+    border: 1px solid #707070;
+    width: 200px;
+}
+
+.main .products .product div img {
+    display: block;
+    margin: auto;
+}
+
+.main .products .product .nome-produto {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 14px;
+}
+
+.main .products .product .descricao-produto {
+    font-size: 12px;
+}
+
+.main .products .product .preco-antigo {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.main .products .product .preco-novo {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.main .products .product .promocao {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.main .products .product .btn-comprar {
+    background-color: #FFFFFF;
+    color: #888888;
+    width: 100%;
+    border: 1px solid #707070;
+    padding: 6px 0;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.main .products .product .btn-comprar:hover {
+    color: #FFFFFF;
+    background-color: #888888;
+    cursor: pointer;
+}
+
+.main .products .btn-more {
+    font-size: 16px;
+    color: #888888;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    width: 260px;
+    padding: 11px 0;
+    margin:  12px auto;
+}
+
+.main .products .btn-more:hover {
+    color: #FFFFFF;
+    background-color: #888888;
+    cursor: pointer;
 }
