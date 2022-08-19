@@ -59,29 +59,44 @@
                 
             </article>
             
-            <form class="form" action="">
+            <form id="form" action="">
+                <div class="info">
 
-                <label for="name">Seu nome:</label>
-                <input type="text" id="name">
+                    <label for="name">Seu nome:</label>
+                    <input type="text" id="name">
+                    <span class="span-error hidden"></span>
+
+                </div>
+
+                <div class="info">
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <span class="span-error hidden"></span>
+
+                </div>
                 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email">
-                
-                <label for="cpf">CPF:</label>
-                <input type="number" id="cpf">
+                <div class="info">
+                    
+                    <label for="cpf">CPF:</label>
+                    <input type="number" id="cpf">
+                    <span class="span-error hidden"></span>
+                    <span class="span-error hidden"></span>
+
+                </div>
                 
                 <div class="radio">
                     <div>
 
-                        <input name="sexo" id="m" type="radio">
+                        <input for="m" name="sexo" id="m" type="radio">
                         <label name="sexo" for="m">Masculino</label>
                         
                     </div>
 
                     <div>
 
-                        <input name="sexo" type="radio">
-                        <label name="sexo" id="f" for="f">Feminino</label>
+                        <input for="f" name="sexo" id="f" type="radio">
+                        <label name="sexo" for="f">Feminino</label>
                         
                     </div>
                 </div>
@@ -93,7 +108,10 @@
         </section>
 
         <section class="main">
+
             <h2>Sua seleção especial</h2>
+            
+
         </section>
 
     </div>
