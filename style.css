@@ -184,22 +184,29 @@ body {
 }
 
 .main .products {
-    width: 100%;
-    background-color: red;
+    max-width: 920px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
-.main .products .product-wrapper {
-    width: 200px;
+.main .products .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .main .products .product {
-    border: 1px solid #707070;
     width: 200px;
+    height: 350px;
 }
 
 .main .products .product div img {
     display: block;
     margin: auto;
+    border: 1px solid #707070;
+    width: 200px;
+    height: 150px;
 }
 
 .main .products .product .nome-produto {
@@ -249,6 +256,7 @@ body {
     color: #888888;
     background-color: #FFFFFF;
     border: 1px solid #707070;
+    border-radius: 4px;
     width: 260px;
     padding: 11px 0;
     margin:  12px auto;

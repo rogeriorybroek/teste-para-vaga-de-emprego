@@ -1,7 +1,7 @@
 const formulario = document.querySelector('#form')
 const nome = document.querySelector('#name')
 const btnMore = document.querySelector('.btn-more')
-const produto = document.querySelector('.product')
+const produto = document.querySelector('.wrapper')
 
 
 formulario.onsubmit = validacaoForm
@@ -89,6 +89,8 @@ function alimentarHtml(dados) {
 
     for (let product of products) {
         htmlProdutos += `
+            <div class="product">
+
                 <div class="img">
                     <img src="${product.image}">
                 </div>
@@ -108,6 +110,8 @@ function alimentarHtml(dados) {
                 ou ${product.installments.count}x de R$${product.installments.value}
                 </p>
                 <button class="btn-comprar">Comprar</button>
+
+            </div>
         `
     }
 
