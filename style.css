@@ -9,7 +9,8 @@ body {
 }
 
 .container {
-    width: 920px;
+    max-width: 920px;
+    width: 90%;
     margin: auto;
 }
 
@@ -288,7 +289,8 @@ COMPARTILHAR
 }
 
 .compartilhar #form-compartilhar {
-    width: 720px;
+    max-width: 720px;
+    width: 100%;
     margin: auto;
 }
 
@@ -296,6 +298,8 @@ COMPARTILHAR
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
+    width: 720px;
+    width: 100%;
 }
 
 .compartilhar #form-compartilhar .compartilhar-wrapper .info label {
@@ -305,7 +309,8 @@ COMPARTILHAR
 }
 
 .compartilhar #form-compartilhar .compartilhar-wrapper .info input {
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
     height: 30px;
     margin-top: 7px;
     padding-left: 5px;
