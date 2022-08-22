@@ -3,6 +3,7 @@ const nome = document.querySelector('#name')
 const btnMore = document.querySelector('.btn-more')
 const produto = document.querySelector('.wrapper')
 const form2 = document.querySelector('#form-compartilhar')
+const containerMore = document.querySelector('.container-more')
 
 
 formulario.onsubmit = validacaoForm
