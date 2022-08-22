@@ -75,22 +75,18 @@ function formularioValidado(formTarget) {
     }
 }
 
-// fetch
+
 let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
 
 fetch(url)
     .then(transformarEmJson)
-    .then(exibirNaTela)
     .then(alimentarHtml)
-    .then(changePage)
+    .catch(error => console.log('erro: ' + error))
 
 function transformarEmJson(response) {
     return response.json()
 }
 
-function exibirNaTela(dados) {
-    return dados
-}
 
 function alimentarHtml(dados) {
     const products = dados.products
@@ -124,16 +120,23 @@ function alimentarHtml(dados) {
     }
 
     produto.innerHTML = htmlProdutos
-    return dados
+
+    btnMore.onclick = function () {
+        
+        
+        fetch(`https://${dados.nextPage}`)
+            .then(transformarEmJson)
+            .then(alimentarHtml)
+            .catch(error => console.log(error))
+
+    }
 }
 
-btnMore.onclick = changePage
 
-function changePage(dados) {
 
-    url = `https://${dados.nextPage}`
-    
-}
+
+
+
 
 form2.onsubmit = validacaoForm2
 
